@@ -25,4 +25,5 @@ class PigLatin
 	end
 end
 
-
+# pig = PigLatin.new("hello world")
+# pig.translate
