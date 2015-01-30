@@ -2,6 +2,7 @@ class PigLatin
 
 	def initialize(stringIn)
 		raise "input nil" if (stringIn.nil?)
+		raise "input has weird character" if stringIn.match(/\W /)
 		@string = stringIn
 		@words = @string.split(" ")
 	end
@@ -23,4 +24,5 @@ class PigLatin
 		return recombinated
 	end
 end
+
 

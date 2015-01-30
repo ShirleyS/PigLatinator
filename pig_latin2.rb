@@ -2,6 +2,8 @@ class PigLatin
 
 	def self.translate(stringIn)
 		raise "input nil" if (stringIn.nil?)
+		raise "input has weird character" if stringIn.match(/\W /)
+
 		@string = stringIn
 		@words = @string.split(" ")
 		recombinated_array = []
